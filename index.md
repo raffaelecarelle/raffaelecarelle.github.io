@@ -13,6 +13,7 @@ meta-description: Home page of Raffaele's blog.
     <p>
       {% if post.excerpt %}
         {{ post.excerpt }}
+        <a href="{{site.url}}{{site.baseurl}}{{post.url}}" style="color: #0000EE">[READ MORE]</a>
       {% else %}
         {{ post.content }}
       {% endif %}
