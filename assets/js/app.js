@@ -9,10 +9,13 @@
         var x = 1;
         var waiting = false;
         var target = document.getElementById(id)
+        var countWords = 0;
         target.setAttribute('style', 'color:' + colors[0])
         window.setInterval(function() {
-
-            if (letterCount === 0 && waiting === false) {
+            if (countWords === words.length) {
+                waiting = true;
+                return;
+            }else if (letterCount === 0 && waiting === false) {
                 waiting = true;
                 target.innerHTML = words[0].substring(0, letterCount)
                 window.setTimeout(function() {
@@ -28,6 +31,7 @@
             } else if (letterCount === words[0].length + 1 && waiting === false) {
                 waiting = true;
                 window.setTimeout(function() {
+                    countWords +=1;
                     x = -1;
                     letterCount += x;
                     waiting = false;
