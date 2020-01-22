@@ -91,7 +91,7 @@ a:hover	{
 	animation: 1s blink step-end infinite;
 }
 
-@keyframes "blink" {
+@keyframes blink {
 	from, to {
 		color: transparent;
 	}
@@ -109,7 +109,7 @@ a:hover	{
 	}
 }
 
-@-webkit-keyframes "blink" {
+@-webkit-keyframes blink {
 	from, to {
 		color: transparent;
 	}
@@ -118,7 +118,7 @@ a:hover	{
 	}
 }
 
-@-ms-keyframes "blink" {
+@-ms-keyframes blink {
 	from, to {
 		color: transparent;
 	}
@@ -127,7 +127,7 @@ a:hover	{
 	}
 }
 
-@-o-keyframes "blink" {
+@-o-keyframes blink {
 	from, to {
 		color: transparent;
 	}
