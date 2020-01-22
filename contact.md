@@ -6,6 +6,6 @@ meta-title: Contacts
 meta-description: Contacts page
 ---
 
-- email: raffaele.carelle@algoritma.it
-- phone: +39 364 328 5177
+- email: {{site.email}}
+- phone: {{site.phone}}
 
