@@ -1,0 +1,9 @@
+{% if site.categories.size > 0 %}
+<div id="categories">
+    <p><b>All Categories:</b>&nbsp;
+        {% for category in site.categories %}
+            <a href="{{site.url}}{{site.baseurl}}/categories/{{category|first}}/">#{{category|first}}</a>&nbsp;
+        {% endfor %}
+    </p>
+</div>
+{% endif %}

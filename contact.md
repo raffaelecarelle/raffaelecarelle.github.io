@@ -6,6 +6,6 @@ meta-title: Contacts
 meta-description: Contacts page
 ---
 
-- email: {{site.email}}
-- phone: {{site.phone}}
+- email: <a href="mailto:{{site.email}}">{{site.email}}</a>
+- phone: <a href="tel:{{site.phone}}">{{site.phone}}</a>
 
