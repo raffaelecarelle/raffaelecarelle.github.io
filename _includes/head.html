@@ -2,8 +2,10 @@
     <title>{{page.title}} | {{site.owner}}</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/default.min.css">
+    <link href="{{site.url}}{{site.baseurl}}/assets/css/highlight-androidstudio.min.css" type="text/css" rel="stylesheet">
     <link href="{{site.url}}{{site.baseurl}}/assets/css/style.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
     <meta content="{% if page.meta-title and page.meta-title != '' %}{{page.meta-title}}{% else %}{{page.title}}{% endif %} | Raffaele Carelle" name="title">
     <meta content="{% if page.meta-description and page.meta-description != '' %}{{page.meta-description}}{% else %}{{page.content|strip_html}}{% endif %}" name="description">
     <meta content="{{site.owner}}" name="author">
