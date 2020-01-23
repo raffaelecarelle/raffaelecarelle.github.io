@@ -15,6 +15,10 @@ The company I work for is ALGORITMA, a innovative *Software house / Web agency* 
 
 I love this work, becouse my team is the best and the projects that we are working on are big and satisfying. 
 
+I also work on various open-source PHP projects, and I'm typically paid to work with backend PHP application architecture.
+
+Recently I've contributed to translate the new Symfony book "The fast track".
+
 This is me, and if you want to say "hi" on <a href="https://twitter.com/{{site.twitter_username}}" target="_blank"><i class="fa fa-twitter social" aria-hidden="true"></i> Tweeter</a>
 or following me on <a href="https://github.com/{{site.github_username}}" target="_blank"><i class="fa fa-github social" aria-hidden="true"></i> Github</a>.
 
