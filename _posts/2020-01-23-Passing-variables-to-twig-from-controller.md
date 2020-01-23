@@ -31,7 +31,7 @@ return new Response($this->twig->render('path/to/template.html.twig', $params);
 
 ```
 
-The variable `$params` is an array which can contains every you want (other arrays, text, object, entity...)
+The variable `$params` is an array which can contains every you want (other arrays, text, objects, entities etc...)
 
 *If our Controller extends the Symfony AbstractController we have a way to write a better and cleaner code*
 
