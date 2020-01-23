@@ -21,5 +21,5 @@ This is me, and if you want to say "hi" on <a href="https://twitter.com/{{site.t
 or following me on <a href="https://github.com/{{site.github_username}}" target="_blank"><i class="fa fa-github social" aria-hidden="true"></i> Github</a>.
 
 My other contacts are:
-- email: <a href="mailto:{{site.email}}">{{site.email}}</a>
+- email: <a class="email" href="mailto:{{site.email}}">{{site.email}}</a>
 - phone: <a href="tel:{{site.phone}}">{{site.phone}}</a>
