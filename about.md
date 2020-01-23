@@ -5,17 +5,17 @@ permalink: /about/
 meta-title: Abount me
 meta-description: About page
 ---
-Hi everyone, my name is Raffaele I've 30 years old and I live in Sacile (PN) Italy. My hobbies are limusic, films and watching tv series,
+Hi everyone, my name is **Raffaele Carelle** I've 30 years old and I live in Sacile (PN) Italy. My hobbies are limusic, films and watching tv series,
 and of course, technology.
 
-I've started on develop web application many yeas ago, and since then I have not stopped. Since two years I develop with Symfony framework and I like so much.
-Now I work with OROCOMMERCE/OROCRM/OROPLATFORM tools, which are developed in Symfony and they are very useful to build awesome e-commerce platforms!
+I've started on develop Web Application many yeas ago, and since then I have not stopped. Since two years I develop with **Symfony framework** and I like so much.
+Now I work with *OROCOMMERCE/OROCRM/OROPLATFORM* tools, which are developed in Symfony and they are very useful to build awesome **e-commerce platforms**!
 
-The company I work for is ALGORITMA, a innovative *Software house / Web agency* located in a beautiful city called Oderzo (TV).
+The company I work for is **ALGORITMA**, a innovative *Software house / Web agency* located in a beautiful city called Oderzo (TV).
 
-I love this work, becouse my team is the best and the projects that we are working on are big and satisfying. 
+I love this work, because my team is the best and the projects that we are working on are big and satisfying. 
 
-I also work on various open-source PHP projects, recently for example, I've contributed to translate the new *Symfony book "The fast track"*.
+I also work on various **open-source PHP projects**, recently for example, I've contributed to translate the new *Symfony book "The fast track"*.
 
 This is me, and if you want to say "hi" on <a href="https://twitter.com/{{site.twitter_username}}" target="_blank"><i class="fa fa-twitter social" aria-hidden="true"></i> Tweeter</a>
 or following me on <a href="https://github.com/{{site.github_username}}" target="_blank"><i class="fa fa-github social" aria-hidden="true"></i> Github</a>.
