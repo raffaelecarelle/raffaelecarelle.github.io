@@ -5,7 +5,7 @@ permalink: /about/
 meta-title: Abount me
 meta-description: About page
 ---
-Hi everyone, my name is **Raffaele Carelle** I've 30 years old and I live in Sacile (PN) Italy. My hobbies are limusic, films and watching tv series,
+Hi everyone, my name is **Raffaele Carelle** I've 30 years old and I live in Sacile (PN) Italy. My hobbies are listen music, films and watching tv series,
 and of course, technology.
 
 I've started on develop Web Application many yeas ago, and since then I have not stopped. Since two years I develop with **Symfony framework** and I like so much.
