@@ -5,19 +5,18 @@ date:   2020-01-24 01:03:29 +0200
 categories:
 comments: true
 ---
+A long time ago, the PHP web applications were distributed throughout via FTP from local computer to remote server. This way may be fast and the result of our work is immediately.
 
-A long time ago, the PHP application was deployed via FTP from local computer to remote server. This way may be fast and the result of our work is immediately.
+BUT...There are big BUT.
 
-BUT...There are a big BUT.
-
-- The process of "Deploying" hasn't feedback and not test or build are execute before deploy for assicurarsi that web application has no error to infect production mode.
+- The process of "Deploying" hasn't feedback and test or build aren't executed before deploy the application so we can't be sure that web application has no error to production mode.
 - No backup (only manually backup, if you remember do it) and no easy rollback to previously version are available.
 
-The tool that I'm here to suggest, called Deployer (it has written in php).
+The tool that I'm here to suggest, is called Deployer (it was written in php).
 
-#### Cos'è Deployer
+#### What is Deployer
 
-**[Docs ufficiale](https://deployer.org/docs/getting-started.html)**
+**[official documentation](https://deployer.org/docs/getting-started.html)**
 
 Deployer manage and automate a new release distribution of the our web application.
 
@@ -133,7 +132,7 @@ host('prod')
 There are many availables recipes that contain the default tasks for common CMS, tools or frameworks like Symfony, Laravel, Magento, Wordpress, Zend, Prestashop etc.
 As described above these default task can be overriden from us in the main config file **deploy.php**.
 
-## BEFORE IT DO THAT ##
+## BEFORE THIS DO THAT ##
 
 We can also, specify a task which it must execute before ones with **before** deployer function like below:
 
@@ -143,7 +142,7 @@ We can also, specify a task which it must execute before ones with **before** de
 before('task-name', 'other-task-name');
 ```
 
-## AFTER IT DO THAT ##
+## AFTER THIS DO THAT ##
 
 Similarly to above we can define the tasks that are performed ** AFTER ** another task:
 
