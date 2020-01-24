@@ -1,0 +1,161 @@
+---
+layout: post
+title:  "How to deploy a PHP web application with confidence?"
+date:   2020-01-24 01:03:29 +0200
+categories:
+comments: true
+---
+
+A long time ago, the PHP application was deployed via FTP from local computer to remote server. This way may be fast and the result of our work is immediately.
+
+BUT...There are a big BUT.
+
+- The process of "Deploying" hasn't feedback and not test or build are execute before deploy for assicurarsi that web application has no error to infect production mode.
+- No backup (only manually backup, if you remember do it) and no easy rollback to previously version are available.
+
+The tool that I'm here to suggest, called Deployer (it has written in php).
+
+#### Cos'è Deployer
+
+**[Docs ufficiale](https://deployer.org/docs/getting-started.html)**
+
+Deployer manage and automate a new release distribution of the our web application.
+
+As write before, it has written in php and it is possibile to install throught composer:
+
+```
+#!bash
+
+composer install deployer/deployer
+```
+
+type instruction below to initialize the config file (main entry) of deployer:
+
+```
+#!bash
+
+./vendor/bin/deployer init
+```
+
+Usually (but not always) the config file is located in the root dir of the project and it called **deploy.php**
+
+#### Folder structure ##
+
+- application-path
+    - .dep
+    - releases
+        - 1
+        - 2
+        - ...
+    - shared
+    - current
+
+1. **.dep** is a hidden folder, where deployer store the releases tracking and it create inside a **.lock** file which it allow one deploy at a time.
+2. **releases** is the folder where deployer store five releases version in case we are costretti to rollback ar previous release becouse an error occured in the last release
+3. **current** is a symbolic link to the last release
+4. **shared** is the folder which manage the files or folders which haven't override
+
+The config file can contains many standard recipes, custom ones or override existing others
+
+The **tasks** are the core of the deployer. They are a php function that make a specific work and they are execute in the specific order.
+
+example:
+
+```
+#!php
+
+task('task-name', function () {
+    run('echo "Hello world!"');
+});
+```
+
+There is a way to define a deployer variable trhought a **set** function as below:
+
+```
+#!php
+
+set('variableName', 'value');
+```
+
+And then we can use them in the deployer context:
+
+```
+#!php
+
+{{variableName}}
+```
+
+If the variable already exists in the standard recipe that we are basing to, and we re-defined it, this vartiable will be override with the new value
+
+example. Below we re-defined the repository where our application is versioned and it will be cloned from deployer:
+
+```
+#!php
+
+set('repository', 'git@bitbucket.org:qweb_srl/foo-repo.git');
+```
+
+others important variables are:
+* shared_files
+* shared_folders
+
+respectively they represents:
+* The files that haven't to override
+* The folders that haven't to override
+
+These files or folder won't override from other version of them and they will store inside **shared** folder.
+
+### Hosts
+
+Another importa function in deployer is host. It defines where the application will be deployed.
+We can define one or more hosts, if the web app is shared from more customers or environment (production, staging etc.) 
+
+```
+#!php
+
+host('staging')
+  ->hostname('demo.foo.it')
+  ->user('demofoo')
+  ->port('1234')
+  ->set('deploy_path', '~/{{application}}')
+  ->set('branch', 'staging');
+
+host('prod')
+  ->hostname('prod')
+  ->user('foo')
+  ->port('1234')
+  ->set('deploy_path', '~/{{application}}')
+  ->set('branch', 'master');
+```
+
+## Recipes ##
+
+There are many availables recipes that contain the default tasks for common CMS, tools or frameworks like Symfony, Laravel, Magento, Wordpress, Zend, Prestashop etc.
+As described above these default task can be overriden from us in the main config file **deploy.php**.
+
+## BEFORE IT DO THAT ##
+
+We can also, specify a task which it must execute before ones with **before** deployer function like below:
+
+```
+#!php
+
+before('task-name', 'other-task-name');
+```
+
+## AFTER IT DO THAT ##
+
+Similarly to above we can define the tasks that are performed ** AFTER ** another task:
+
+```
+#!php
+
+after('task-name', 'other-task-name');
+```
+
+
+
+
+
+
+
