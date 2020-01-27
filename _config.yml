@@ -15,7 +15,7 @@ theme: minima
 
 permalink: /:year/:month/:day/:title/
 
-gems:
+plugins:
   - jekyll-feed
 exclude:
   - Gemfile
