@@ -1,14 +1,21 @@
 <div id="footer">
   <p>
     © 2020 {{site.owner}}  ·
-    <a href="{{site.url}}{{site.baseurl}}/contact/">Contact</a>
+    <a href="{{site.url}}{{site.baseurl}}/contact/">Contacts</a>
   </p>
   <p>
-    <a href="https://github.com/raffaelecarelle" target="_blank">
+    <a href="https://github.com/{{site.github_username}}" target="_blank">
       <i class="fa fa-github fa-2x social" aria-hidden="true"></i>
     </a>
-    <a href="https://twitter.com/RaffoTweet" target="_blank">
+    <a href="https://twitter.com/{{site.twitter_username}}" target="_blank">
       <i class="fa fa-twitter fa-2x social" aria-hidden="true"></i>
     </a>
   </p>
 </div>
+
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+<script src="{{site.url}}{{site.baseurl}}/assets/js/app.js"></script>
+
+<script>hljs.initHighlightingOnLoad();hljs.initLineNumbersOnLoad();</script>
+

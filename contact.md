@@ -2,8 +2,10 @@
 layout: default
 title: Contacts
 permalink: /contact/
+meta-title: Contacts
+meta-description: Contacts page
 ---
 
-- email: raffaele.carelle@algoritma.it
-- phone: +39 364 328 5177
+- email: <a class="email" href="mailto:{{site.email}}">{{site.email}}</a>
+- phone: <a href="tel:{{site.phone}}">{{site.phone}}</a>
 
